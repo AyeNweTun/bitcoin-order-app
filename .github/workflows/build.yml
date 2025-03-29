@@ -50,7 +50,7 @@ jobs:
       #    npm run test --watch=false --browsers=ChromeHeadless
       - name: Conventional Changelog Action
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v3
+        uses: TriPSs/conventional-changelog-action@v4
         with:
           github-token: ${{ secrets.WORKSHOP6_GITHUB_TOKEN }}
           output-file: "false"
