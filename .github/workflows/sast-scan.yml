@@ -22,8 +22,7 @@ jobs:
 
       - name: OWASP Dependency Check
         run: |
-          wget https://github.com/dependency-check/DependencyCheck/releases/download/v12.1.0/dependency-check-12.1.0-release.zip
-          unzip dependency-check-12.1.0-release.zip
+          docker run --rm -v $(pwd):/src owasp/dependency-check --project "bitcoin" --scan /src > ODC-report
 
       - name: Run scan with ODC
         run: |
